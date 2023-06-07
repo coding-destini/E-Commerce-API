@@ -10,7 +10,8 @@ const app = express();
 
 // Setting the port number for the server
 const port = 7000 || process.env.port;
-const multer  = require('./config/multer')
+const multer = require('multer');
+
 
 app.use(express.json()); // Middleware to parse JSON data in the request body
 app.use(express.urlencoded({ extended: true })); // Middleware to parse URL-encoded data in the request body with extended mode enabled
