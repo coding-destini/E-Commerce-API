@@ -14,6 +14,13 @@ const port = 7000 || process.env.port;
 app.use(express.json()); // Middleware to parse JSON data in the request body
 app.use(express.urlencoded({ extended: true })); // Middleware to parse URL-encoded data in the request body with extended mode enabled
 
+app.set('view engine','ejs')
+
+
+app.use(express.static('assets'));    //accesing static files from assets folder
+app.use('/uploads',express.static(__dirname+'/uploads'));   //accesing uploaded files from uploads folder 
+
+app.use(express.urlencoded({ extended: true })) 
 
 // Mounting the routes
 app.use('/', require('./routes/index'));

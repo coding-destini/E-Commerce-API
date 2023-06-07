@@ -8,6 +8,9 @@ const ProductSchema = new mongoose.Schema({
   quantity: {
     type: String,
     required: true
+  },
+  image:{
+    type:String
   }
 }, {
   timestamps: true
