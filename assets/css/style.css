@@ -174,4 +174,8 @@
   }
 }
 
-
+@media screen and (max-width: 767px) {
+  #box-outer {
+    display: none;
+  }
+}
