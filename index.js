@@ -12,6 +12,11 @@ const app = express();
 const port = 7000 || process.env.port;
 const multer = require('multer');
 
+// Redirect root URL ("/") to "/products"
+app.get('/', (req, res) => {
+  res.redirect('/products');
+});
+
 
 app.use(express.json()); // Middleware to parse JSON data in the request body
 app.use(express.urlencoded({ extended: true })); // Middleware to parse URL-encoded data in the request body with extended mode enabled
